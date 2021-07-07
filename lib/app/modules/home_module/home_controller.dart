@@ -21,8 +21,4 @@ class HomeController extends GetxController {
       curve: Curves.ease,
     );
   }
-
-  void decrease() {
-    this.selectedIndex.value -= 1;
-  }
 }

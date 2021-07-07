@@ -6,6 +6,9 @@ class Assets {
   /// ![preview](file:///Volumes/macOS-Data/Freelancer/sgben/assets/icons/ben_touch.png)
   static const String ASSETS_ICONS_BEN_TOUCH_PNG = 'assets/icons/ben_touch.png';
 
+  /// ![preview](file:///Volumes/macOS-Data/Freelancer/sgben/assets/icons/cancel.png)
+  static const String ASSETS_ICONS_CANCEL_PNG = 'assets/icons/cancel.png';
+
   /// ![preview](file:///Volumes/macOS-Data/Freelancer/sgben/assets/icons/car_rental.png)
   static const String ASSETS_ICONS_CAR_RENTAL_PNG =
       'assets/icons/car_rental.png';
@@ -30,6 +33,9 @@ class Assets {
   /// ![preview](file:///Volumes/macOS-Data/Freelancer/sgben/assets/icons/left-arrow.png)
   static const String ASSETS_ICONS_LEFT_ARROW_PNG =
       'assets/icons/left-arrow.png';
+
+  /// ![preview](file:///Volumes/macOS-Data/Freelancer/sgben/assets/icons/marker.png)
+  static const String ASSETS_ICONS_MARKER_PNG = 'assets/icons/marker.png';
 
   /// ![preview](file:///Volumes/macOS-Data/Freelancer/sgben/assets/icons/notification.png)
   static const String ASSETS_ICONS_NOTIFICATION_PNG =

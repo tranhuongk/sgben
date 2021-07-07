@@ -29,6 +29,17 @@ class AppTextStyles {
     color: AppColors.white,
     fontSize: 14,
   );
+  static const TextStyle regular14RiverBed = TextStyle(
+    fontWeight: FontWeight.w400,
+    color: AppColors.riverBed,
+    height: 1.42,
+    fontSize: 14,
+  );
+  static const TextStyle regular12RiverBed = TextStyle(
+    fontWeight: FontWeight.w400,
+    color: AppColors.riverBed,
+    fontSize: 12,
+  );
   static const TextStyle normal14RiverBed = TextStyle(
     fontWeight: FontWeight.w500,
     color: AppColors.riverBed,
@@ -49,6 +60,11 @@ class AppTextStyles {
     fontWeight: FontWeight.w600,
     color: AppColors.riverBed,
     fontSize: 14,
+  );
+  static const TextStyle semiBold12RiverBed = TextStyle(
+    fontWeight: FontWeight.w600,
+    color: AppColors.riverBed,
+    fontSize: 12,
   );
 
   static const TextStyle medium18White = TextStyle(

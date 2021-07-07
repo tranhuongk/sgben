@@ -44,8 +44,13 @@ class AppColors {
   static const Color riverBed = Color(0xFF425060);
   static const Color alabaster = Color(0xFFF8F8F8);
   static const Color coral = Color(0xFFFF7A4E);
+  static const Color mercury = Color(0xFFE8E8E8);
 
   static const List<Color> redAccent2greenLight = [redAccent, greenLight];
   static const List<Color> mustard2selectiveYellow = [mustard, selectiveYellow];
+  static final List<Color> mustard2selectiveYellow32 = [
+    mustard.withOpacity(0.32),
+    selectiveYellow.withOpacity(0.32)
+  ];
   static const List<Color> greenLight2redAccent = [greenLight, redAccent];
 }

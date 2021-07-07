@@ -8,11 +8,11 @@ import 'package:get/get.dart';
 import 'package:sgben/app/modules/home_module/home_controller.dart';
 import 'package:sgben/app/modules/home_module/widgets/button.dart';
 import 'package:sgben/app/modules/home_module/widgets/custom_effect.dart';
+import 'package:sgben/app/routes/app_pages.dart';
 import 'package:sgben/app/theme/app_colors.dart';
 import 'package:sgben/app/theme/app_text_theme.dart';
 import 'package:sgben/app/utils/widgets/bottom_navy_bar.dart';
 import 'package:sgben/app/utils/widgets/custom_paint.dart';
-import 'package:sgben/app/utils/widgets/gradient_fa_icon.dart';
 import 'package:sgben/const/resource.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -206,7 +206,7 @@ class HomePage extends GetView<HomeController> {
                       width: 40.w,
                     ),
                   ),
-                  onPressed: () {},
+                  onPressed: () => Get.toNamed(AppRoutes.SEARCH),
                   pressedOpacity: 0.8,
                   color: AppColors.white,
                   padding: EdgeInsets.zero,
@@ -227,7 +227,7 @@ class HomePage extends GetView<HomeController> {
             ),
           ),
           Positioned(
-            top: 0.w,
+            top: Get.statusBarHeight > 100 ? 0 : 16.w,
             child: SafeArea(
               child: Container(
                 width: 1.sw,

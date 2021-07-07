@@ -6,4 +6,5 @@ class AppRoutes {
   static const HOME = '/home'; // Home page
   static const LOGIN = '/login'; // Login page
   static const REGISTER = '/register'; // Register page
+  static const SEARCH = '/search'; // Search Page
 }
