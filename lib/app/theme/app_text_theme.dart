@@ -45,6 +45,11 @@ class AppTextStyles {
     color: AppColors.selectiveYellow,
     fontSize: 14,
   );
+  static const TextStyle semiBold14RiverBed = TextStyle(
+    fontWeight: FontWeight.w600,
+    color: AppColors.riverBed,
+    fontSize: 14,
+  );
 
   static const TextStyle medium18White = TextStyle(
     fontWeight: FontWeight.w500,

@@ -7,12 +7,19 @@ class HomeController extends GetxController {
   final HomeProvider? provider;
 
   final RxInt selectedIndex = 0.obs;
-  final PageController _pageController = PageController();
+  final PageController pageIndicatorController =
+      PageController(viewportFraction: 0.8);
 
   void onItemSelected(int index) {
     this.selectedIndex.value = index;
-    _pageController.animateToPage(index,
-        duration: Duration(milliseconds: 300), curve: Curves.ease);
+  }
+
+  void onDotClicked(int index) {
+    pageIndicatorController.animateToPage(
+      index,
+      duration: Duration(milliseconds: 300),
+      curve: Curves.ease,
+    );
   }
 
   void decrease() {
