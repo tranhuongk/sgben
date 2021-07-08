@@ -5,6 +5,8 @@ class Assets {
 
   /// ![preview](file:///Volumes/macOS-Data/Freelancer/sgben/assets/icons/ben_touch.png)
   static const String ASSETS_ICONS_BEN_TOUCH_PNG = 'assets/icons/ben_touch.png';
+  static const String ASSETS_ICONS_BEN_FRAME_PNG =
+      'assets/images/ben_frame.png';
 
   /// ![preview](file:///Volumes/macOS-Data/Freelancer/sgben/assets/icons/cancel.png)
   static const String ASSETS_ICONS_CANCEL_PNG = 'assets/icons/cancel.png';
@@ -32,10 +34,16 @@ class Assets {
 
   /// ![preview](file:///Volumes/macOS-Data/Freelancer/sgben/assets/icons/left-arrow.png)
   static const String ASSETS_ICONS_LEFT_ARROW_PNG =
-      'assets/icons/left-arrow.png';
+      'assets/icons/left_arrow.png';
+  static const String ASSETS_ICONS_LEFT_ARROW_DISABLE_PNG =
+      'assets/icons/left_arrow_disable.png';
 
   /// ![preview](file:///Volumes/macOS-Data/Freelancer/sgben/assets/icons/marker.png)
   static const String ASSETS_ICONS_MARKER_PNG = 'assets/icons/marker.png';
+  static const String ASSETS_ICONS_MARKER_MERCURY_PNG =
+      'assets/icons/marker_mercury.png';
+  static const String ASSETS_ICONS_MARKER_MUSTARD_PNG =
+      'assets/icons/marker_mustard.png';
 
   /// ![preview](file:///Volumes/macOS-Data/Freelancer/sgben/assets/icons/notification.png)
   static const String ASSETS_ICONS_NOTIFICATION_PNG =

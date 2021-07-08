@@ -14,6 +14,7 @@ import 'package:sgben/app/theme/app_text_theme.dart';
 import 'package:sgben/app/utils/widgets/bottom_navy_bar.dart';
 import 'package:sgben/app/utils/widgets/custom_paint.dart';
 import 'package:sgben/const/resource.dart';
+import 'package:shadowed_image/shadowed_image.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class HomePage extends GetView<HomeController> {
@@ -199,12 +200,13 @@ class HomePage extends GetView<HomeController> {
                   ],
                 ),
                 child: CupertinoButton(
-                  child: Padding(
-                    padding: EdgeInsets.only(top: 4.w),
-                    child: Image.asset(
+                  child: ShadowedImage(
+                    image: Image.asset(
                       Assets.ASSETS_ICONS_LEFT_ARROW_PNG,
                       width: 40.w,
                     ),
+                    blurRadius: 4.w,
+                    offset: Offset(0, 4.w),
                   ),
                   onPressed: () => Get.toNamed(AppRoutes.SEARCH),
                   pressedOpacity: 0.8,
