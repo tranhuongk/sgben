@@ -8,13 +8,16 @@ class SearchController extends GetxController {
   final SearchProvider? provider;
   SearchController({this.provider});
 
-  final RxInt _step = 0.obs;
+  final RxInt _step = 2.obs;
+  final RxInt count = 1.obs;
   final RxString location =
-      '561 Điện Biên Phủ, Phường 25, Bình Thạnh, Thành phố Hồ Chí Minh'.obs;
+      '25 bis , Phường 25, Bình Thạnh, Thành phố Hồ Chí Minh'.obs;
   final TextEditingController textController = TextEditingController();
 
   final RxBool isActiveNext = false.obs;
   final RxList listSearchItem = [].obs;
+  final RxList listCheckbox = [false, false].obs;
+  final RxDouble height = 0.0.obs;
 
   final SolidController solidController = SolidController();
 
@@ -40,6 +43,9 @@ class SearchController extends GetxController {
       ),
     ];
     listSearchItem.addAll(initList);
+    solidController.heightStream.listen((value) {
+      height.value = value;
+    });
   }
 
   int get step => _step.value;
@@ -78,5 +84,14 @@ class SearchController extends GetxController {
       Get.back();
     else
       _step.value--;
+  }
+
+  void increase() => count.value++;
+  void decrease() {
+    if (count.value > 1) count.value--;
+  }
+
+  void checkboxChanged(bool val, int index) {
+    listCheckbox[index] = val;
   }
 }

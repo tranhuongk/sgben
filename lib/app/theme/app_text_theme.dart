@@ -23,6 +23,11 @@ class AppTextStyles {
     color: AppColors.white,
     fontSize: 16,
   );
+  static const TextStyle bold24SelectiveYellow = TextStyle(
+    fontWeight: FontWeight.w700,
+    color: AppColors.selectiveYellow,
+    fontSize: 24,
+  );
 
   static const TextStyle regular14White = TextStyle(
     fontWeight: FontWeight.w400,
@@ -32,6 +37,29 @@ class AppTextStyles {
   static const TextStyle regular14RiverBed = TextStyle(
     fontWeight: FontWeight.w400,
     color: AppColors.riverBed,
+    height: 1.42,
+    fontSize: 14,
+  );
+  static const TextStyle regular10RiverBed = TextStyle(
+    fontWeight: FontWeight.w400,
+    color: AppColors.riverBed,
+    fontSize: 10,
+  );
+  static final TextStyle regular14RiverBed72 = TextStyle(
+    fontWeight: FontWeight.w400,
+    color: AppColors.riverBed.withOpacity(0.72),
+    height: 1.42,
+    fontSize: 14,
+  );
+  static final TextStyle regular14RiverBed87 = TextStyle(
+    fontWeight: FontWeight.w400,
+    color: AppColors.riverBed.withOpacity(0.87),
+    height: 1.42,
+    fontSize: 14,
+  );
+  static final TextStyle regular14RiverBed60 = TextStyle(
+    fontWeight: FontWeight.w400,
+    color: AppColors.riverBed.withOpacity(0.6),
     height: 1.42,
     fontSize: 14,
   );
@@ -45,6 +73,24 @@ class AppTextStyles {
     fontWeight: FontWeight.w400,
     color: AppColors.riverBed,
     fontSize: 12,
+  );
+  static const TextStyle regular12Coral = TextStyle(
+    fontWeight: FontWeight.w400,
+    color: AppColors.coral,
+    fontSize: 12,
+    height: 20 / 12,
+  );
+  static const TextStyle medium12Coral = TextStyle(
+    fontWeight: FontWeight.w500,
+    color: AppColors.coral,
+    fontSize: 12,
+    height: 20 / 12,
+  );
+  static const TextStyle bold12Coral = TextStyle(
+    fontWeight: FontWeight.bold,
+    color: AppColors.coral,
+    fontSize: 12,
+    height: 20 / 12,
   );
   static final TextStyle regular12RiverBed60 = TextStyle(
     fontWeight: FontWeight.w400,
@@ -71,6 +117,11 @@ class AppTextStyles {
   static const TextStyle semiBold14RiverBed = TextStyle(
     fontWeight: FontWeight.w600,
     color: AppColors.riverBed,
+    fontSize: 14,
+  );
+  static final TextStyle semiBold14RiverBed60 = TextStyle(
+    fontWeight: FontWeight.w600,
+    color: AppColors.riverBed.withOpacity(0.6),
     fontSize: 14,
   );
   static const TextStyle semiBold12RiverBed = TextStyle(
