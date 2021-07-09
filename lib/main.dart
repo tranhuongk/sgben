@@ -24,6 +24,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     "Your device locale: ${Get.deviceLocale}".logStr(name: 'Locale');
+    final textTheme = Theme.of(context).textTheme;
     return ScreenUtilInit(
       designSize: Size(375, 812),
       builder: () => GestureDetector(
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
         onTap: () => Common.dismissKeyboard(),
         child: GetMaterialApp(
           initialRoute: AppRoutes.HOME,
-          theme: AppThemes.themData,
+          theme: AppThemes.themData(textTheme),
           getPages: AppPages.pages,
           locale: AppTranslation.locale,
           translationsKeys: AppTranslation.translations,

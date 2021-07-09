@@ -59,6 +59,7 @@ flutter:
   assets:
       - assets/images/
       - assets/icons/
+      - assets/google_fonts/
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
