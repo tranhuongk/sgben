@@ -1,4 +1,6 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/route_manager.dart';
 import 'package:sgben/app/routes/app_pages.dart';
@@ -8,6 +10,10 @@ import 'package:sgben/app/utils/common.dart';
 import 'package:sgben/app/utils/extensions.dart';
 
 void main() async {
+  LicenseRegistry.addLicense(() async* {
+    final license = await rootBundle.loadString('assets/google_fonts/OFL.txt');
+    yield LicenseEntryWithLineBreaks(['google_fonts'], license);
+  });
   WidgetsFlutterBinding.ensureInitialized();
 
   runApp(MyApp());
