@@ -38,6 +38,7 @@ dependencies:
   shadowed_image: ^1.0.3
   substring_highlight: ^1.0.33
   solid_bottom_sheet: ^0.1.10
+  show_up_animation: ^2.0.0
 
 dev_dependencies:
   flutter_test:

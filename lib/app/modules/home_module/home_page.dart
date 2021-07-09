@@ -207,6 +207,7 @@ class HomePage extends GetView<HomeController> {
                     ),
                     blurRadius: 4.w,
                     offset: Offset(0, 4.w),
+                    scale: 36 / 40,
                   ),
                   onPressed: () => Get.toNamed(AppRoutes.SEARCH),
                   pressedOpacity: 0.8,
@@ -394,10 +395,10 @@ class HomePage extends GetView<HomeController> {
                                     : AppColors.riverBed.withOpacity(0.6),
                               ),
                               title: Text(
-                                'Người dùng',
+                                'Hồ sơ',
                                 style: AppTextStyles.semiBold14SelectiveYellow,
                               ),
-                              tooltip: 'Người dùng',
+                              tooltip: 'Hồ sơ',
                               activeColor: AppColors.mustard,
                               inactiveColor:
                                   AppColors.riverBed.withOpacity(0.6),

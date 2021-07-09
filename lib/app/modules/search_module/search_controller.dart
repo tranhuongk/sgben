@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:sgben/app/data/provider/search_provider.dart';
 import 'package:sgben/app/modules/search_module/widgets/search_item.dart';
@@ -8,17 +9,18 @@ class SearchController extends GetxController {
   final SearchProvider? provider;
   SearchController({this.provider});
 
-  final RxInt _step = 2.obs;
+  final RxInt _step = 0.obs;
   final RxInt count = 1.obs;
   final RxString location =
       '25 bis , Phường 25, Bình Thạnh, Thành phố Hồ Chí Minh'.obs;
   final TextEditingController textController = TextEditingController();
 
   final RxBool isActiveNext = false.obs;
+  final RxBool visible = false.obs;
   final RxList listSearchItem = [].obs;
   final RxList listCheckbox = [false, false].obs;
   final RxDouble height = 0.0.obs;
-
+  final double maxHeight = 0.73.sh;
   final SolidController solidController = SolidController();
 
   List initList = [];
@@ -45,6 +47,12 @@ class SearchController extends GetxController {
     listSearchItem.addAll(initList);
     solidController.heightStream.listen((value) {
       height.value = value;
+      if (value == 0 &&
+          solidController.smoothness!.value == Smoothness.medium.value)
+        visible.value = false;
+      else
+        visible.value = true;
+      print("Snmothess: ${solidController.smoothness!.value}");
     });
   }
 
@@ -79,11 +87,12 @@ class SearchController extends GetxController {
     listSearchItem.addAll(text.isEmpty ? initList : searchList);
   }
 
-  void cancelPressed() {
+  void onPreviousStepPressed() {
     if (step < 1)
       Get.back();
     else
       _step.value--;
+    if (step != 2) solidController.hide();
   }
 
   void increase() => count.value++;
@@ -93,5 +102,12 @@ class SearchController extends GetxController {
 
   void checkboxChanged(bool val, int index) {
     listCheckbox[index] = val;
+  }
+
+  Future<bool> onWillPop() async {
+    if (_step.value == 0) return true;
+    _step.value--;
+    if (step != 2) solidController.hide();
+    return false;
   }
 }
